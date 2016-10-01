@@ -8,4 +8,20 @@
     <string name="splash_002"></string>
     <string name="splash_003"></string>
 
+    <string name="tab_000">Profile</string>
+    <string name="tab_001">Events</string>
+    <string name="tab_002">Map</string>
+
+    <string name="frag_profile_000">Profile</string>
+    <string name="frag_profile_001"></string>
+    <string name="frag_profile_002"></string>
+
+    <string name="frag_event_000">Events</string>
+    <string name="frag_event_001"></string>
+    <string name="frag_event_002"></string>
+
+    <string name="frag_map_000">Map</string>
+    <string name="frag_map_001"></string>
+    <string name="frag_map_002"></string>
+
 </resources>
