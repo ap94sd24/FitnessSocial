@@ -85,7 +85,7 @@
 	 statusChangeCallback(response);
  });
 
- };
+
 
 	  (function(d, s, id){
 	     var js, fjs = d.getElementsByTagName(s)[0];
@@ -103,7 +103,7 @@ function testAPI() {
 		console.log('Successful login for: ' + response.name);
 		document.getElementById('status').innerHTML =
 			'Thanks for logging in, ' + response.name + '!';
-	});
+	});9
 }
 	</script
 
@@ -113,6 +113,8 @@ function testAPI() {
 
 <div id="status">
 </div>
+
+<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
 
 
 	<div class="preloader">
