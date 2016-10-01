@@ -2,4 +2,10 @@
     <string name="app_name">Fitness Social</string>
 
     <string name="app_title">Fitness Social</string>
+
+    <string name="splash_000">Tap to Proceed</string>
+    <string name="splash_001"></string>
+    <string name="splash_002"></string>
+    <string name="splash_003"></string>
+
 </resources>
