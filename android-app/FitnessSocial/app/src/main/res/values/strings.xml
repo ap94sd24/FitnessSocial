@@ -3,6 +3,15 @@
 
     <string name="app_title">Fitness Social</string>
 
+    <!-- Google Play Variables -->
+    <string name="google_api_key">AIzaSyAltTgaCx_vxcntwIeiAYQd1eY5FLx3_S8</string>
+
+    <!-- Facebook Variables -->
+    <string name="facebook_app_id">1182619848467649</string>
+    <string name="facebook_app_pass">bdc41db2e5efd44de50c969e6e7c7634</string>
+    <!--<string name="facebook_app_hash">A2gdy6smDZ449FDrM2yteH/7PL8=</string>-->
+    <string name="facebook_app_hash">P70eeHc6MVAeM7Kfq3AWGFySXqo=</string>
+
     <string name="splash_000">Tap to Proceed</string>
     <string name="splash_001"></string>
     <string name="splash_002"></string>
