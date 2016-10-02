@@ -40,30 +40,7 @@
 
 <body>
 
-	<script>
-	  window.fbAsyncInit = function() {
-	    FB.init({
-	      appId      : '374647742923762',
-	      xfbml      : true,
-	      version    : 'v2.7'
-	    });
-	  };
 
-	  (function(d, s, id){
-	     var js, fjs = d.getElementsByTagName(s)[0];
-	     if (d.getElementById(id)) {return;}
-	     js = d.createElement(s); js.id = id;
-	     js.src = "//connect.facebook.net/en_US/sdk.js";
-	     fjs.parentNode.insertBefore(js, fjs);
-	   }(document, 'script', 'facebook-jssdk'));
-	</script>
-
-	<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
 
  <div class="preloader">
 	 <img src="img/loader.gif" alt="Preloader image">
@@ -87,7 +64,7 @@
 				 <li><a href="#services"> Events </a></li>
 				 <li><a href="#team">Team</a></li>
 
-				 <li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Up</a></li>
+				 <li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-yellow">Sign Up</a></li>
 			 </ul>
 		 </div>
 		 <!-- /.navbar-collapse -->
@@ -100,6 +77,37 @@
 			 <div class="header-text">
 				 <div class="row">
 					 <div class="col-md-12 text-center">
+
+						 <form action="http://maps.google.com/maps" method="get" target="_blank">
+					<p>Enter your starting address:</p>
+					<input type="text" name="saddr" style= "color: black;" />
+					<input type="hidden" name="daddr" value="[Your Business Address Here]" />
+					<input type="submit" style= "color: black;" value="Get Directions" />
+					</form>
+
+						 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'>
+						 </script>
+						 <div style='overflow:hidden;height:440px;width:1200px;'>
+							 <div id='gmap_canvas' style='height:440px;width:1200px; position: center;'>
+							 </div><div><small>
+								 <a href="http://www.embedgooglemaps.com/en/">
+									 Generate your map here, quick and easy!
+									 					Give your customers directions
+																				Get found</a>
+																			</small></div><div><small>
+																				<a href="http://freedirectorysubmissionsites.com/">click here</a></small>
+																			</div>
+																			<style>#gmap_canvas img{max-width:none!important;background:none!important}
+																			</style>
+																		</div>
+																			<script type='text/javascript'>
+																			function init_map(){
+																				var myOptions = {
+																					zoom:14,center:new google.maps.LatLng(32.8724709,-117.23522830000002),mapTypeId: google.maps.MapTypeId.ROADMAP};
+																					map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+																					marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(32.8724709,-117.23522830000002)});
+																					infowindow = new google.maps.InfoWindow({content:'<strong>Current Location</strong><br>9450 Gilman Dr. La Jolla<br>'});
+																					google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
 						 <h3 class="light white">Take care of your body.</h3>
 						 <h1 class="white typed">It's the only place you have to live.</h1>
 						 <span class="typed-cursor">|</span>
@@ -391,28 +399,12 @@
  <footer>
 	 <div class="container">
 		 <div class="row">
-			 <div class="col-sm-6 text-center-mobile">
-				 <h3 class="white">Reserve a Free Trial Class!</h3>
-				 <h5 class="light regular light-white">Shape your body and improve your health.</h5>
-				 <a href="#" class="btn btn-blue ripple trial-button">Start Free Trial</a>
-			 </div>
-			 <div class="col-sm-6 text-center-mobile">
-				 <h3 class="white">Opening Hours <span class="open-blink"></span></h3>
-				 <div class="row opening-hours">
-					 <div class="col-sm-6 text-center-mobile">
-						 <h5 class="light-white light">Mon - Fri</h5>
-						 <h3 class="regular white">9:00 - 22:00</h3>
-					 </div>
-					 <div class="col-sm-6 text-center-mobile">
-						 <h5 class="light-white light">Sat - Sun</h5>
-						 <h3 class="regular white">10:00 - 18:00</h3>
-					 </div>
-				 </div>
-			 </div>
+
+
 		 </div>
 		 <div class="row bottom-footer text-center-mobile">
 			 <div class="col-sm-8">
-				 <p>&copy; 2015 All Rights Reserved. Powered by <a href="http://www.phir.co/">PHIr</a> exclusively for <a href="http://tympanus.net/codrops/">Codrops</a></p>
+				 <p>&copy; 2016 All Rights Reserved. Edited by Adam Pan and powered by <a href="http://www.phir.co/">PHIr</a> exclusively for <a href="http://tympanus.net/codrops/">Codrops</a></p>
 			 </div>
 			 <div class="col-sm-4 text-right text-center-mobile">
 				 <ul class="social-footer">

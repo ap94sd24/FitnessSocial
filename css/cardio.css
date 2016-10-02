@@ -114,7 +114,7 @@ header {
 	width: 100%;
 	color: white;
 	background: rgba(28, 36, 65, 0.93);
-	background: url('../img/header.jpg');
+	background: url('../img/header.png');
 	background-size: cover;
 }
 
@@ -1109,8 +1109,3 @@ footer .social-footer li:hover a {
 		padding-top: 0;
 	}
 }
-
-
-
-
-
