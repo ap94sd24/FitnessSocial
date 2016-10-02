@@ -29,6 +29,16 @@
     <string name="frag_profile_005">Gender:</string>
     <string name="frag_profile_006">Hobbies:</string>
     <string name="frag_profile_007">Activities:</string>
+    <string name="frag_profile_008">Mask Name:</string>
+    <string name="frag_profile_009">Phone:</string>
+
+    <string name="frag_settings_000">Settings</string>
+    <string name="frag_settings_001">GPS Location</string>
+    <string name="frag_settings_002">User Privacy</string>
+    <string name="frag_settings_002a">Masked</string>
+    <string name="frag_settings_002b">Basic</string>
+    <string name="frag_settings_002c">Opened</string>
+    <string name="frag_settings_003">Terms of Service</string>
 
     <string name="frag_event_000">Events</string>
     <string name="frag_event_001"></string>
