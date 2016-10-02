@@ -197,6 +197,7 @@ public class FragmentMap extends SupportMapFragment implements GoogleApiClient.C
             public void onClick(DialogInterface dialog, int which) {
                 // Host Event
                 Toast.makeText(getActivity(), "Check the Events to edit event.", Toast.LENGTH_SHORT).show();
+                //EventInfo newEvent = new EventInfo();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
