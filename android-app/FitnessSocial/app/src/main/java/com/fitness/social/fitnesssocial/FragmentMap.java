@@ -1,11 +1,18 @@
 package com.fitness.social.fitnesssocial;
 
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +49,7 @@ public class FragmentMap extends SupportMapFragment implements GoogleApiClient.C
             GoogleMap.MAP_TYPE_HYBRID,
             GoogleMap.MAP_TYPE_TERRAIN,
             GoogleMap.MAP_TYPE_NONE };
-    private int curMapTypeIndex = 0;
+    private int curMapTypeIndex = 1;
 
     public FragmentMap() {
         // Required empty public constructor
@@ -125,9 +132,17 @@ public class FragmentMap extends SupportMapFragment implements GoogleApiClient.C
 
     @Override
     public void onConnected(Bundle bundle) {
-        mCurrentLocation = LocationServices.FusedLocationApi.getLastLocation( mGoogleApiClient );
 
-        initCamera( mCurrentLocation );
+        mCurrentLocation = LocationServices.FusedLocationApi.getLastLocation( mGoogleApiClient );
+        LocationManager manager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+
+        // Verifies the GPS Signal validity
+        if(!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            Toast.makeText( getActivity(), "Please turn on GPS or Location.", Toast.LENGTH_LONG).show();
+        } else {
+            initCamera(mCurrentLocation);
+        }
+
     }
 
     @Override
@@ -172,6 +187,26 @@ public class FragmentMap extends SupportMapFragment implements GoogleApiClient.C
 
         options.icon( BitmapDescriptorFactory.fromBitmap(
                 BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher ) ) );
+
+        // Hosting an Event
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("Hosting Event");
+        builder.setMessage("Set up an event at\n" + getAddressFromLatLng(latLng) + "?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Host Event
+                Toast.makeText(getActivity(), "Check the Events to edit event.", Toast.LENGTH_SHORT).show();
+                //EventInfo newEvent = new EventInfo();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Don't Host Event
+            }
+        });
+        builder.create().show();
 
         getMap().addMarker(options);
     }
